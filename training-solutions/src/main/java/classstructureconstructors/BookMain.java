@@ -1,6 +1,5 @@
 package classstructureconstructors;
 
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class BookMain {
