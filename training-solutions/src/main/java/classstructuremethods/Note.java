@@ -9,7 +9,7 @@ public class Note {
         return name;
     }
     public String getTopic() {
-        return topic;
+       return topic;
     }
     public String getText() {
         return text;

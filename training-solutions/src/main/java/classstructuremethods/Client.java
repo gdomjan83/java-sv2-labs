@@ -16,13 +16,13 @@ public class Client {
     }
 
     public void setName(String newName) {
-        name = newName;
+        this.name = newName;
     }
     public void setYear(int year) {
         this.year = year;
     }
     public void setAddress(String newAddress) {
-        address = newAddress;
+        this.address = newAddress;
     }
 
     public void migrate(String newAddress) {
