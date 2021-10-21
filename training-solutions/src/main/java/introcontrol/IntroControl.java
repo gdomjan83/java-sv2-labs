@@ -34,28 +34,22 @@ public class IntroControl {
     }
 
     public int calculateConsumption(int prev, int next) {
-        int result = next - prev;
-        if (next == 9999) {
-            prev = 0;
+        if (prev <= next) {
+            return prev - next;
         } else {
-            prev = next;
+            return 10000 - prev + next;
         }
-        return result;
     }
 
     public void printNumbers(int max) {
         for (int i = 0; i <= max; i++) {
-            if (i % 2 == 0) {
-                System.out.println(i);
-            }
+            System.out.println(i);
         }
     }
 
     public void printNumbersBetween(int min, int max) {
         for (int i = min; i <= max; i++) {
-            if (i > 0) {
-                System.out.println(i);
-            }
+            System.out.println(i);
         }
     }
 
