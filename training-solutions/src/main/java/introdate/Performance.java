@@ -30,6 +30,6 @@ public class Performance {
     }
 
     public String getInfo() {
-        return getArtist() + ": " + getDate() + " " + getStartTime() + "-" + getEndTime();
+        return artist + ": " + date + " " + startTime + "-" + endTime;
     }
 }
