@@ -1,5 +1,7 @@
 package arrays;
 
+import java.util.Arrays;
+
 public class ArraysMainTest {
     public static void main(String[] args) {
         ArraysMain arr = new ArraysMain();
@@ -30,6 +32,12 @@ public class ArraysMainTest {
         System.out.println("Eltérő hosszúságú napok összehasonlítása:\n" + arr.sameTempValuesDayLight(shortDay, longDay));
         System.out.println();
 
+        int[] playedNumbers = {32, 60, 12, 20, 75};
+        int[] winningNumbers = {90, 64, 71, 60, 30};
+
+        System.out.println("Megjátszott számok sorbarendezés előtt: " + Arrays.toString(playedNumbers));
+        System.out.println("Nyert a lottón?\n" + arr.wonLottery(playedNumbers, winningNumbers));
+        System.out.println("Megjátszott számok sorbarendezés után: " + Arrays.toString(playedNumbers));
 
     }
 }

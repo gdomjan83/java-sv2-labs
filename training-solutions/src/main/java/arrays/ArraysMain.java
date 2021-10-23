@@ -49,8 +49,20 @@ public class ArraysMain {
     }
 
     public boolean wonLottery(int[] playedNumbers, int[] winningNumbers) {
+      /* Arrays.sort(playedNumbers);    //ez módosítja az eredeti tömböt a sorbarendezés során
+        Arrays.sort(winningNumbers);
+        return Arrays.equals(playedNumbers, winningNumbers);*/
+
+        //ez másolatot készít az eredeti tömbről, és csak azt módosítja a sorbarendezéssel
+        int [] copyPlayed = Arrays.copyOf(playedNumbers, 5);
+        int[] copyWinning = new int[5];
+        //kétféleképpen is lehet másolni a tömböt
+        System.arraycopy(winningNumbers, 0, copyWinning, 0, winningNumbers.length);
+
+        Arrays.sort(copyPlayed);
+        Arrays.sort(copyWinning);
+        return Arrays.equals(copyPlayed, copyWinning);
 
 
-        return true;
     }
 }
