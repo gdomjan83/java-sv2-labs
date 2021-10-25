@@ -1,5 +1,9 @@
 package objects;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class ObjectsMain {
     public static void main(String[] args) {
         new Book(); //később nem hozzáférhető, mert nem rendeltük változóhoz
@@ -18,5 +22,19 @@ public class ObjectsMain {
         anotherBook = book;
         System.out.println(anotherBook);
         System.out.println(book == anotherBook);
+        System.out.println();
+
+        System.out.println("Tömbök és listák feladat:");
+        Book[] books = {new Book(), new Book(), new Book()};
+        List<Book> listOfBooks = Arrays.asList(new Book(), new Book(), new Book());
+        List<Book> bookList = new ArrayList<>();
+        bookList.add(new Book());
+        bookList.add(new Book());
+        bookList.add(new Book());
+        System.out.println(Arrays.toString(books));
+        System.out.println(listOfBooks);
+        System.out.println(bookList);
+
+
     }
 }
