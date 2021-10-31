@@ -1,4 +1,4 @@
-package filename;
+package stringmethods.filename;
 
 public class FileNameManipulator {
     public char findLastCharacter(String string) {
