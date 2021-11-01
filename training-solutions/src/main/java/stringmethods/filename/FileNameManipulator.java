@@ -3,7 +3,7 @@ package stringmethods.filename;
 public class FileNameManipulator {
     public char findLastCharacter(String string) {
         String trimmed = string.trim();
-        int lastPeriodIndex = trimmed.lastIndexOf(".");
+        int lastPeriodIndex = trimmed.lastIndexOf("."); //nem vesszük bele a kiterjeszést, hanem a fájlnév utolsó karakterét nézzük
         return string.charAt(lastPeriodIndex - 1);
     }
 

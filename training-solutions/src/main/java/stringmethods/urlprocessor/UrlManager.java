@@ -6,92 +6,122 @@ public class UrlManager {
     private String host;
     private String path;
     private String query;
-    private String url;
 
     public UrlManager(String url){
-        this.url = url;
+        this.protocol = findProtocol(url);
+        this.host = findHost(url);
+        this.port = findPort(url);
+        this.path = findPath(url);
+        this.query = findQuery(url);
     }
 
     public String getProtocol() {
-        int colonIndex = url.indexOf(":");
-        return url.substring(0, colonIndex).toLowerCase();
-    }
-
-    public String getHost() {
-        String trimmed = url.replace(getProtocol().concat("://"), "");
-        int colonIndex = trimmed.indexOf(":");
-        int slashIndex = trimmed.indexOf("/");
-        if (colonIndex != -1) {
-            return trimmed.substring(0, colonIndex);
-        } else {
-            return trimmed.substring(0, slashIndex);
-        }
+        return protocol;
     }
 
     public Integer getPort() {
-        String trimmed = url.replace(getProtocol().concat("://"), "").replace(getHost(), "");
-        int colonIndex = trimmed.indexOf(":");
-        int slashIndex = trimmed.indexOf("/");
-        if (colonIndex != -1) {
-            String port = trimmed.substring(colonIndex + 1, slashIndex);
-            return Integer.parseInt(port);
-        } else {
-            return null;
-        }
+        return port;
+    }
+
+    public String getHost() {
+        return host;
     }
 
     public String getPath() {
-        int numberOfSlashes = 0;
-        int thirdSlashIndex = 0;
-        int questionMarkIndex = url.indexOf("?");
-        for (int i = 0; i < url.length(); i++) {
-            if (url.charAt(i) == '/') {
-                numberOfSlashes++;
-            }
-            if (numberOfSlashes == 3) {
-                thirdSlashIndex = i;
-                break;
-            }
-        }
-        if (thirdSlashIndex == 0) {
-            return "";
-        } else {
-            if (questionMarkIndex != -1) {
-                return url.substring(thirdSlashIndex + 1, questionMarkIndex);
+        return path;
+    }
+
+    public String getQuery() {
+        return query;
+    }
+
+    public String findProtocol(String url) {
+        int end = url.indexOf(":");
+        return url.substring(0, end).toLowerCase();
+    }
+
+    public String findHost(String url) {
+        int start = url.indexOf("/") + 2;
+        int end = url.indexOf(":", start);
+        if (end == -1) {
+            end = url.indexOf("/", start);
+            if (end == -1) {
+                return url.substring(start).toLowerCase();
             } else {
-                return "";
+                return url.substring(start, end).toLowerCase();
+            }
+        } else {
+            return url.substring(start, end).toLowerCase();
+        }
+    }
+
+    public Integer findPort(String url) {
+        int start = url.indexOf("/") + 2;
+        start = url.indexOf(":", start);
+        if (start == -1) {
+            return null;
+        } else {
+            int end = url.indexOf("/", start);
+            if (end == -1) {
+                return Integer.valueOf(url.substring(start + 1));
+            } else {
+                return Integer.valueOf(url.substring(start + 1, end));
             }
         }
     }
 
-    public String getQuery() {
-        int questionMarkIndex = url.indexOf("?");
-        if (questionMarkIndex != -1) {
-            return url.substring(questionMarkIndex + 1);
-        } else {
+    public String findPath(String url) {
+        int start = url.indexOf("/") + 2;
+        start = url.indexOf("/", start);
+        if (start == -1) {
             return "";
+        } else {
+            int end = url.indexOf("?", start);
+            if (end == -1) {
+                return url.substring(start + 1);
+            } else {
+                return url.substring(start + 1, end);
+            }
+        }
+    }
+
+    public String findQuery(String url) {
+        int start = url.indexOf("?");
+        if (start == -1) {
+            return "";
+        } else {
+            return url.substring(start + 1);
         }
     }
 
     public boolean hasProperty(String key) {
-        if (getQuery().contains(key)) {
-            return true;
-        }
-        return false;
+        return query.startsWith(key + "=") || query.contains("&" + key + "=");
     }
 
     public String getProperty(String key) {
         if (hasProperty(key)) {
-            int keyIndex = getQuery().indexOf(key);
-            int keyLength = key.length();
-            int andIndex = getQuery().indexOf("&", keyIndex);
-            if (andIndex != -1) {
-                return getQuery().substring(keyIndex + keyLength + 1, andIndex);
+            if (query.startsWith(key + "=")) {
+                int start = query.indexOf("=") + 1;
+                int end = query.indexOf("&");
+                if (end == -1) {
+                    return query.substring(start);
+                } else {
+                    return query.substring(start, end);
+                }
+            } else if (query.contains("&" + key + "=")) {
+                int start = query.indexOf("&" + key + "=");
+                start = query.indexOf("=", start);
+                int end = query.indexOf("&", start);
+                if (end == -1) {
+                    return query.substring(start + 1);
+                } else {
+                    return query.substring(start + 1, end);
+                }
             } else {
-                return getQuery().substring(keyIndex + keyLength + 1);
+                return null;
             }
         } else {
-            return "";
+            return null;
         }
     }
 }
