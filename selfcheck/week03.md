@@ -58,11 +58,11 @@ a típusokról, az operátorokról, valamint a szöveges típusról.
 
 ## Konzultációk
 
-* [ ] 2021-10-25 konzultáció részvétel/videó
+* [x] 2021-10-25 konzultáció részvétel/videó
 * [x] 2021-10-25 konzultáció gyakorlati feladat
-* [ ] 2021-10-26 konzultáció részvétel/videó
+* [x] 2021-10-26 konzultáció részvétel/videó
 * [x] 2021-10-26 konzultáció gyakorlati feladat
-* [ ] 2021-10-28 konzultáció részvétel/videó
+* [x] 2021-10-28 konzultáció részvétel/videó
 * [x] 2021-10-28 konzultáció gyakorlati feladat
-* [ ] 2021-10-29 konzultáció részvétel/videó
+* [x] 2021-10-29 konzultáció részvétel/videó
 * [x] 2021-10-29 konzultáció gyakorlati feladat
