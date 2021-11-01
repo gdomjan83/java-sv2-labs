@@ -38,6 +38,5 @@ public class Airport {
         flight4.setStatus(Status.DELETED);
 
         System.out.println(airport.getDeletedFlights());
-
     }
 }
