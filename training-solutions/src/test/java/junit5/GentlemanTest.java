@@ -1,17 +1,17 @@
-package introjunit;
+package junit5;
 
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-
 public class GentlemanTest {
+
     @Test
-    public void Test() {
+    void testCase() {
         Gentleman gentleman = new Gentleman();
 
-        String welcome = gentleman.sayHello("Jackie");
+        String result = gentleman.sayHello(null);
 
-        assertEquals("Hello Jackie!", welcome);
+        assertEquals("Hello Anonymus", result);
     }
 }
