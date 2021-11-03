@@ -9,9 +9,9 @@ fogtok tanulni a vezérlési szerkezetekről.
 * [x] [JUnit 5 videó](https://e-learning.training360.com/courses/take/java-se-alapok-java-nyelvi-elemek/lessons/17606488-junit-5)
 * [x] JUnit 5 gyakorlati feladat
 * [x] [JUnit 5 assert metódusok videó](https://e-learning.training360.com/courses/take/java-se-alapok-java-nyelvi-elemek/lessons/28177547-junit-5-assert-metodusok)
-* [ ] JUnit 5 assert metódusok gyakorlati feladat
-* [ ] [JUnit 5 tesztesetek életciklusa videó](https://e-learning.training360.com/courses/take/java-se-alapok-java-nyelvi-elemek/lessons/28177579-junit-5-tesztesetek-eletciklusa)
-* [ ] JUnit 5 tesztesetek életciklusa gyakorlati feladat  
+* [x] JUnit 5 assert metódusok gyakorlati feladat
+* [x] [JUnit 5 tesztesetek életciklusa videó](https://e-learning.training360.com/courses/take/java-se-alapok-java-nyelvi-elemek/lessons/28177579-junit-5-tesztesetek-eletciklusa)
+* [x] JUnit 5 tesztesetek életciklusa gyakorlati feladat  
 
 ## Vezérlési szerkezetek
 
