@@ -3,7 +3,7 @@
 Ezen a héten megtanultok automatikus teszteseteket írni, valamint részletesebben 
 fogtok tanulni a vezérlési szerkezetekről.
 
-## Unit tesztelés JUnitta
+## Unit tesztelés JUnittat
 
 * [x] [Unit tesztelés JUnit 4 használatával videó](https://e-learning.training360.com/courses/take/java-se-alapok-java-nyelvi-elemek/lessons/10709855-unit-teszteles-junit-4-hasznalataval)
 * [x] [JUnit 5 videó](https://e-learning.training360.com/courses/take/java-se-alapok-java-nyelvi-elemek/lessons/17606488-junit-5)
