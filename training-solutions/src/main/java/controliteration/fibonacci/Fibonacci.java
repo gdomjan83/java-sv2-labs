@@ -33,8 +33,8 @@ public class Fibonacci {
             fibonacci.add(fibonacci.get(j - 1) + fibonacci.get(j - 2));
         }
 
-        for (Integer item : fibonacci) {
-            System.out.print(item + " ");
+        for (int k = 0; k < number; k++) {
+            System.out.print(fibonacci.get(k) + " ");
         }
     }
 }
