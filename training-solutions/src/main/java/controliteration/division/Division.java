@@ -12,7 +12,7 @@ public class Division {
 
     public String generateResultWithFor() {
         StringBuilder result = new StringBuilder();
-        for (int i = 1; i <= number; i++) {
+        for (int i = 1; i < number; i++) {
             if (i % divider == 0) {
                 result.append(i);
                 result.append(", ");
@@ -24,7 +24,7 @@ public class Division {
     public String generateResultWithWhile() {
         StringBuilder result = new StringBuilder();
         int i = 1;
-        while (i <= number) {
+        while (i < number) {
             if (i % divider == 0) {
                 result.append(i);
                 result.append(", ");
