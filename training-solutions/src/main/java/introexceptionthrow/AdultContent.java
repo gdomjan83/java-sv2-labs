@@ -5,5 +5,4 @@ public class AdultContent {
         Adult adult = new Adult("Zoli", 20);
         Adult adult2 = new Adult("Gábor", 11);
     }
-
 }
