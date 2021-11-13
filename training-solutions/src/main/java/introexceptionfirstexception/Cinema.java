@@ -16,12 +16,12 @@ public class Cinema {
         int row = sc.nextInt(); //ha itt nem számot ad meg a vásárló, akkor InputMismatchException keletkezik
 
         System.out.println("A mozijegy.hu rendszerben vásárolt jegyek adatai a következők:");
-        System.out.println("Vásárló neve: " + name);;
+        System.out.println("Vásárló neve: " + name);
         System.out.println("Film címe: " + title);
 
         StringBuilder sb = new StringBuilder("Lefoglalt helyek: ");
         for (int i = 1; i <= tickets; i++) {
-            sb.append(String.valueOf(row) + ". sor " + String.valueOf(i) + ". szék");
+            sb.append(row + ". sor " + i + ". szék");
             if (i != tickets) {
                 sb.append(", ");
             }
