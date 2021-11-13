@@ -2,22 +2,22 @@ package introexceptionthrow;
 
 public class Validation {
     public void validateName(String name) {
-        if (name == null || "".equals(name)) {
+        if (name == null || name.isBlank()) {
             throw new IllegalArgumentException("Nem adott meg nevet.");
         }
     }
 
     public void validateAge(String age) {
-        if (age == null || "".equals(age)) {
+        if (age == null || age.isBlank()) {
             throw new IllegalArgumentException("Nem adott meg életkort.");
         }
         for (Character digit : age.toCharArray()) {
             if (!Character.isDigit(digit)) {
-                throw new IllegalArgumentException("Nem számot adott meg.");
+                throw new IllegalArgumentException("A megadott érték nem szám, vagy negatív szám. Hibás formátum.");
             }
         }
-        if (Integer.parseInt(age) <= 0 || Integer.parseInt(age) > 120) {
-            throw new IllegalArgumentException("Az életkora nem 0 és 120 közé esik. Ön vagy meg sem született, vagy már valószínűleg egy hulla.");
+        if (Integer.parseInt(age) > 120) {
+            throw new IllegalArgumentException("Az életkora 120-nál nagyobb. Ön már valószínűleg egy hulla.");
         }
     }
 }
