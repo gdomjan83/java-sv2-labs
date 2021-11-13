@@ -16,7 +16,8 @@ public class Message {
         System.out.println(new String(sb)); //prints Legyen szép napod!
 
         List<String> anotherCodedMessage = Arrays.asList("69", "122", "32", "101", "103", "121", "32", "104", "105", "98", "225",
-                "115", "32", "252", "122", "1O1", "110", "101", "116", "46"); //a 101-es karakterben 0 helyett O betű szerepel, Number Format Exception hibát okozva
+                "115", "32", "252", "122", "1O1", "110", "101", "116", "46");
+        //a 101-es karakterben 0 helyett O betű szerepel, NumberFormatException hibát okozva
 
         StringBuilder newSb = new StringBuilder();
         for (int i = 0; i < anotherCodedMessage.size(); i++) {
