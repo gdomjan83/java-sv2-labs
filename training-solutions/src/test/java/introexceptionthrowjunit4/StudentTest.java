@@ -39,7 +39,4 @@ public class StudentTest {
         IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, () -> student.addNote(6));
         assertEquals("Note must be between 1 and 5!", exception.getMessage());
     }
-
-
-
 }
