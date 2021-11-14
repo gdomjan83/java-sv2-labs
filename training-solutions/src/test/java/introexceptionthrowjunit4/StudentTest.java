@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class StudentTest {
 
-    Student student = new Student();
+    private Student student = new Student();
 
     @Test
     public void testAddNote() {
