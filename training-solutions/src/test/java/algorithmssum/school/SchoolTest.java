@@ -18,5 +18,4 @@ public class SchoolTest {
 
         assertEquals(101, total);
     }
-
 }
