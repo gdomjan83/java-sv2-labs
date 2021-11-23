@@ -7,7 +7,7 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class TransactionSumCalculatorTest {
+public class TransactionCounterTest {
     @Test
     void testCalculator() {
         TransactionSumCalculator calc = new TransactionSumCalculator();
