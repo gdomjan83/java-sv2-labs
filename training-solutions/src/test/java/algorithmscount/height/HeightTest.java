@@ -1,4 +1,4 @@
-package algorithmcount.height;
+package algorithmscount.height;
 
 import algorithmscount.heights.Height;
 import org.junit.jupiter.api.Test;
