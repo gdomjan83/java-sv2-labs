@@ -14,11 +14,11 @@ Ezen a héten nagyrészt ismétlés következik, néhány újabb ismerettel: a p
 * [x] [Eldöntés tétele videó](https://e-learning.training360.com/courses/take/java-se-alapok-java-nyelvi-elemek/lessons/16980673-eldontes-tetele)
 * [x] Eldöntés tétele gyakorlati feladat
 * [x] [Szűrés videó](https://e-learning.training360.com/courses/take/java-se-alapok-java-nyelvi-elemek/lessons/18066930-szures)
-* [ ] Szűrés gyakorlati feladat
+* [x] Szűrés gyakorlati feladat
 * [x] [Transzformáció videó](https://e-learning.training360.com/courses/take/java-se-alapok-java-nyelvi-elemek/lessons/18066933-transzformacio)
-* [ ] Transzformáció gyakorlati feladat
+* [x] Transzformáció gyakorlati feladat
 * [x] [Rekurzió videó](https://e-learning.training360.com/courses/take/java-se-alapok-java-nyelvi-elemek/lessons/16980676-rekurzio)
-* [ ] Rekurzió gyakorlati feladat
+* [x] Rekurzió gyakorlati feladat
   
 ## Attribútumok és metódusok
 
