@@ -27,9 +27,9 @@ Ezen a héten nagyrészt ismétlés következik, néhány újabb ismerettel: a p
 * [x] [JavaBeans objektumok videó](https://e-learning.training360.com/courses/take/java-se-alapok-java-nyelvi-elemek/lessons/29525757-javabeans-objektumok)
 * [x] JavaBeans objektumok gyakorlati feladat
 * [x] [Metódusok videó](https://e-learning.training360.com/courses/take/java-se-alapok-java-nyelvi-elemek/lessons/29525772-metodusok)
-* [ ] Metódusok gyakorlati feladat
+* [x] Metódusok gyakorlati feladat
 * [x] [Értékmásolás szerinti paraméterátadás videó](https://e-learning.training360.com/courses/take/java-se-alapok-java-nyelvi-elemek/lessons/29525776-ertekmasolas-szerinti-parameteratadas)
-* [ ] Értékmásolás szerinti paraméterátadás gyakorlati feladat
+* [x] Értékmásolás szerinti paraméterátadás gyakorlati feladat
 * [x] [Metódus paraméterek és visszatérési értékek videó](https://e-learning.training360.com/courses/take/java-se-alapok-java-nyelvi-elemek/lessons/29525904-metodus-parameterek-es-visszateresi-ertekek)
 * [ ] Metódus paraméterek és visszatérési értékek gyakorlati feladat
 * [x] [Változó hosszúságú paraméterlista videó](https://e-learning.training360.com/courses/take/java-se-alapok-java-nyelvi-elemek/lessons/29525916-valtozo-hosszusagu-parameterlista)
@@ -56,7 +56,7 @@ Ezen a héten nagyrészt ismétlés következik, néhány újabb ismerettel: a p
 * [x] 2021-11-22 konzultáció gyakorlati feladat
 * [ ] 2021-11-23 konzultáció részvétel/videó
 * [x] 2021-11-23 konzultáció gyakorlati feladat
-* [ ] 2021-11-25 konzultáció részvétel/videó
+* [x] 2021-11-25 konzultáció részvétel/videó
 * [x] 2021-11-25 konzultáció gyakorlati feladat
 * [x] 2021-11-26 konzultáció részvétel/videó
 * [x] 2021-11-26 konzultáció gyakorlati feladat
