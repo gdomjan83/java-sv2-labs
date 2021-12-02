@@ -1,4 +1,4 @@
-package staticattrmeth;
+package staticattrmeth.dogs;
 
 public class Dog {
     private String name;

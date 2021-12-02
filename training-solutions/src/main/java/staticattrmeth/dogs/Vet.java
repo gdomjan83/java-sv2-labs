@@ -1,4 +1,4 @@
-package staticattrmeth;
+package staticattrmeth.dogs;
 
 import java.util.ArrayList;
 import java.util.List;
