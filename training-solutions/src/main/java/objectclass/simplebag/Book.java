@@ -10,7 +10,18 @@ public class Book {
     }
 
     @Override
-    public boolean equals(Object obj) {
-        return super.equals(obj);
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (getClass() != o.getClass()) {
+            return false;
+        }
+
+        Book book = (Book) o;
+        if (author.equals(book.author) && title.equals(book.title)) {
+            return true;
+        }
+        return false;
     }
 }
