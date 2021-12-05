@@ -21,7 +21,7 @@ fogtok megismerkedni.
 ## Absztrakt osztályok és interfészek
 
 * [x] [Absztrakt osztályok videó](https://e-learning.training360.com/courses/take/java-se-alapok-java-nyelvi-elemek/lessons/29592461-absztrakt-osztalyok)
-* [ ] Absztrakt osztályok gyakorlati feladat
+* [x] Absztrakt osztályok gyakorlati feladat
 
 ## Konzultációk
 
