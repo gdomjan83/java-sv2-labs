@@ -11,6 +11,7 @@ public class AxeWarrior extends Character {
         return getRandom().nextInt(1, maxPrimary + 1);
     }
 
+    @Override
     public void secondaryAttack(Character enemy) {
         if (getPosition().distance(enemy.getPosition()) < 2) {
             hit(enemy, getActualSecondaryDamage());

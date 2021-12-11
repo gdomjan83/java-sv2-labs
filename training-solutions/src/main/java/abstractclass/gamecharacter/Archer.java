@@ -22,6 +22,7 @@ public class Archer extends Character {
         hit(enemy, getActualSecondaryDamage());
     }
 
+    @Override
     public void secondaryAttack(Character enemy) {
         shootingArrow(enemy);
     }
