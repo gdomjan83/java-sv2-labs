@@ -1,8 +1,8 @@
 package abstractclass.gamecharacter;
 
-public class Point {
-    private long xPos;
-    private long yPos;
+public final class Point {
+    private final long xPos;
+    private final long yPos;
 
     public Point(long xPos, long yPos) {
         this.xPos = xPos;
@@ -18,8 +18,8 @@ public class Point {
     }
 
     public long distance(Point point) {
-        long xDistance = xPos - point.getXPos();
-        long yDistance = yPos - point.getYPos();
+        long xDistance = xPos - point.xPos;
+        long yDistance = yPos - point.yPos;
         return (long) Math.sqrt(Math.pow(xDistance, 2) + Math.pow(yDistance, 2));
     }
 }
