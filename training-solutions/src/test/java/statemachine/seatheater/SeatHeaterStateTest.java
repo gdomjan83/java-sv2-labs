@@ -1,0 +1,16 @@
+package statemachine.seatheater;
+
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+class SeatHeaterStateTest {
+    @Test
+    void testNext() {
+
+        assertEquals(SeatHeaterState.THREE, SeatHeaterState.OFF.changeHeating());
+        assertEquals(SeatHeaterState.TWO, SeatHeaterState.THREE.changeHeating());
+        assertEquals(SeatHeaterState.ONE, SeatHeaterState.TWO.changeHeating());
+        assertEquals(SeatHeaterState.OFF, SeatHeaterState.ONE.changeHeating());
+    }
+}
