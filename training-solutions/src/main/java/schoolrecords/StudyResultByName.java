@@ -19,6 +19,11 @@ public class StudyResultByName {
         return studyAverage;
     }
 
+    @Override
+    public String toString() {
+        return studentName + " - " + studyAverage;
+    }
+
     private boolean isEmpty(String str) {
         if (str == null || str.isEmpty()) {
             throw new IllegalArgumentException("Name of student can not be null or empty.");
