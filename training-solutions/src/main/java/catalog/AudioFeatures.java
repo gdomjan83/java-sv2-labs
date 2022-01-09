@@ -10,17 +10,19 @@ public class AudioFeatures implements Feature {
     private String title;
 
     public AudioFeatures(String title, int length, List<String> performers) {
-        Validators.isBlank(title);
-        Validators.isEmpty(performers);
+        testString(title);
+        testList(performers);
+        testLength(length);
         this.title = title;
         this.length = length;
         this.performers = performers;
     }
 
     public AudioFeatures(String title, int length, List<String> performers, List<String> composer) {
-        Validators.isBlank(title);
-        Validators.isEmpty(performers);
-        Validators.isEmpty(composer);
+        testString(title);
+        testList(performers);
+        testList(composer);
+        testLength(length);
         this.title = title;
         this.length = length;
         this.performers = performers;
@@ -44,4 +46,24 @@ public class AudioFeatures implements Feature {
     public String getTitle() {
         return title;
     }
+
+    private void testString(String input) {
+        if (Validators.isBlank(input)) {
+            throw new IllegalArgumentException("Input is blank or null.");
+        }
+    }
+
+    private void testList(List input) {
+        if (Validators.isEmpty(input)) {
+            throw new IllegalArgumentException("Input list is blank or null.");
+        }
+    }
+
+    private void testLength(int length) {
+        if (length < 1) {
+            throw new IllegalArgumentException("Length must be at least one.");
+        }
+    }
+
+
 }

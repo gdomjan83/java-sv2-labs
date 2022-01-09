@@ -4,18 +4,19 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Catalog {
-    private List<CatalogItem> catalogItems = new ArrayList<>();
+    public List<CatalogItem> catalogItems = new ArrayList<>();
 
     public void addItem(CatalogItem catalogItem) {
         catalogItems.add(catalogItem);
     }
 
     public double averagePageNumberOver(int minPageNumber) {
+        checkMinPageNumber(minPageNumber);
         List<Integer> pageNumbers = new ArrayList<>();
         for (CatalogItem c : catalogItems) {
             getPageNumbers(c, minPageNumber, pageNumbers);
         }
-
+        checkIfThereIsNoPage(pageNumbers.size());
         return (double) (sumPageNumbers(pageNumbers) / pageNumbers.size());
     }
 
@@ -116,5 +117,17 @@ public class Catalog {
             sum += i;
         }
         return sum;
+    }
+
+    private void checkMinPageNumber(int minPageNumber) {
+        if (minPageNumber <= 0) {
+            throw new IllegalArgumentException("Page number must be positive");
+        }
+    }
+
+    private void checkIfThereIsNoPage(int pageNumber) {
+        if (pageNumber <= 0) {
+            throw new IllegalArgumentException("No page");
+        }
     }
 }

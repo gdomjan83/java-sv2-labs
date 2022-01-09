@@ -4,16 +4,20 @@ public final class SearchCriteria {
     private String contributor;
     private String title;
 
-    public static SearchCriteria createByBoth(String contributor, String title) {
-        return new SearchCriteria(contributor, title);
+    public static SearchCriteria createByBoth(String title, String contributor) {
+        testString(contributor);
+        testString(title);
+        return new SearchCriteria(title, contributor);
     }
 
     public static SearchCriteria createByContributor(String contributor) {
-        return new SearchCriteria(contributor, null);
+        testString(contributor);
+        return new SearchCriteria(null, contributor);
     }
 
     public static SearchCriteria createByTitle(String title) {
-        return new SearchCriteria(null, title);
+        testString(title);
+        return new SearchCriteria(title, null);
     }
 
     public String getContributor() {
@@ -32,10 +36,14 @@ public final class SearchCriteria {
         return title != null;
     }
 
-    private SearchCriteria(String contributor, String title) {
+    private SearchCriteria(String title, String contributor) {
         this.contributor = contributor;
         this.title = title;
     }
 
-
+    private static void testString(String input) {
+        if (Validators.isBlank(input)) {
+            throw new IllegalArgumentException("Input is blank or null.");
+        }
+    }
 }
