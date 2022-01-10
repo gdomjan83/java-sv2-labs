@@ -44,8 +44,8 @@ Ezen a héten a kollekciókkal fogtok részletesebben megismerkedni.
 
 ## Konzultációk
 
-* [ ] 2022-01-10 konzultáció részvétel/videó
-* [ ] 2022-01-10 konzultáció gyakorlati feladat
+* [x] 2022-01-10 konzultáció részvétel/videó
+* [x] 2022-01-10 konzultáció gyakorlati feladat
 * [ ] 2022-01-11 konzultáció részvétel/videó
 * [ ] 2022-01-11 konzultáció gyakorlati feladat
 * [ ] 2022-01-13 konzultáció részvétel/videó
