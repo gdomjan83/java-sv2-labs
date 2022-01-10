@@ -4,8 +4,8 @@ Ezen a héten a kollekciókkal fogtok részletesebben megismerkedni.
 
 ## Generikusok
 
-* [ ] [Generikusok használata, diamond operátor videó](https://e-learning.training360.com/courses/take/java-se-halado-koll/lessons/10769614-generikusok-hasznalata-diamond-operator)
-* [ ] Generikusok használata, diamond operátor gyakorlati feladat
+* [x] [Generikusok használata, diamond operátor videó](https://e-learning.training360.com/courses/take/java-se-halado-koll/lessons/10769614-generikusok-hasznalata-diamond-operator)
+* [x] Generikusok használata, diamond operátor gyakorlati feladat
 
 ## Kollekciók
 
