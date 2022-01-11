@@ -11,10 +11,10 @@ Ezen a héten a kollekciókkal fogtok részletesebben megismerkedni.
 
 * [x] [Az equals() és hashCode() metódusok videó](https://e-learning.training360.com/courses/take/java-se-halado-koll/lessons/10769615-az-equals-es-hashcode-metodusok)
 * [x] Az equals() és hashCode() metódusok gyakorlati feladat
-* [ ] [List, ArrayList kontra LinkedList videó](https://e-learning.training360.com/courses/take/java-se-halado-koll/lessons/10769616-list-arraylist-kontra-linkedlist)
-* [ ] List, ArrayList kontra LinkedList gyakorlati feladat
-* [ ] [Set videó](https://e-learning.training360.com/courses/take/java-se-halado-koll/lessons/10769617-set)
-* [ ] Set gyakorlati feladat
+* [x] [List, ArrayList kontra LinkedList videó](https://e-learning.training360.com/courses/take/java-se-halado-koll/lessons/10769616-list-arraylist-kontra-linkedlist)
+* [x] List, ArrayList kontra LinkedList gyakorlati feladat
+* [x] [Set videó](https://e-learning.training360.com/courses/take/java-se-halado-koll/lessons/10769617-set)
+* [x] Set gyakorlati feladat
 * [ ] [Queue videó](https://e-learning.training360.com/courses/take/java-se-halado-koll/lessons/10769618-queue)
 * [ ] Queue gyakorlati feladat
 * [ ] [Map videó](https://e-learning.training360.com/courses/take/java-se-halado-koll/lessons/10769620-map)
@@ -46,8 +46,8 @@ Ezen a héten a kollekciókkal fogtok részletesebben megismerkedni.
 
 * [x] 2022-01-10 konzultáció részvétel/videó
 * [x] 2022-01-10 konzultáció gyakorlati feladat
-* [ ] 2022-01-11 konzultáció részvétel/videó
-* [ ] 2022-01-11 konzultáció gyakorlati feladat
+* [x] 2022-01-11 konzultáció részvétel/videó
+* [x] 2022-01-11 konzultáció gyakorlati feladat
 * [ ] 2022-01-13 konzultáció részvétel/videó
 * [ ] 2022-01-13 konzultáció gyakorlati feladat
 * [ ] 2022-01-14 konzultáció részvétel/videó
