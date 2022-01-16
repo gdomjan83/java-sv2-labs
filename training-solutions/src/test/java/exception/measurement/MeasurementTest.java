@@ -35,16 +35,17 @@ class MeasurementTest {
     @Test
     void testValidateWrong() {
         List<String> input = measurement.readFromFile(Paths.get("src/test/resources/measurementdata.csv"));
+        List<String> a = measurement.validate(input);
         List<String> result = new ArrayList<>();
         result.add("Line 2: Incorrect number of input parameters.");
         result.add("Line 3: Order number is not a number.");
         result.add("Line 4: Measurement is not a number.");
         result.add("Line 5: Name in incorrect format.");
-        result.add("Line 7: Order number is not a number.");
-        result.add("Line 7: Measurement is not a number.");
+        result.add("Line 8: Order number is not a number.");
         result.add("Line 8: Measurement is not a number.");
-        result.add("Line 9: Incorrect number of input parameters.");
+        result.add("Line 9: Measurement is not a number.");
         result.add("Line 10: Incorrect number of input parameters.");
-        assertEquals(input, result);
+        result.add("Line 11: Incorrect number of input parameters.");
+        assertEquals(a, result);
     }
 }

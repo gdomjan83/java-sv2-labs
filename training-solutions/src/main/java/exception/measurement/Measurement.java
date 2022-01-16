@@ -21,7 +21,7 @@ public class Measurement {
             if (!isThereThreeData(input.get(i)) || (isThereEmptyData(input.get(i)))) {
                 result.add("Line " + (i + 1) + ": Incorrect number of input parameters.");
             }
-            if (!hasCorrectName(input.get(i))) {
+            if (isThereThreeData(input.get(i)) && !hasCorrectName(input.get(i))) {
                 result.add("Line " + (i + 1) + ": Name in incorrect format.");
             }
             if (!isOrderCorrect(input.get(i))) {
