@@ -20,12 +20,12 @@ bemutatottakat kell megcsinálni a videóval együtt!
 
 * [x] [SELECT - Adatok kiválasztása az adatbázis tábláiból videó](https://e-learning.training360.com/courses/take/mariadb/lessons/10192530-select-adatok-kivalasztasa-az-adatbazis-tablaibol)
 * [x] [WHERE - Adatok kiválasztása feltételek alapján videó](https://e-learning.training360.com/courses/take/mariadb/lessons/10192516-where-adatok-kivalasztasa-feltetelek-alapjan)
-* [ ] [AND, OR, NOT - Feltételek összekapcsolása a lekérdezésekben videó](https://e-learning.training360.com/courses/take/mariadb/lessons/10192531-and-or-not-feltetelek-osszekapcsolasa-a-lekerdezesekben)
-* [ ] [ORDER BY - Találatok sorba rendezése videó](https://e-learning.training360.com/courses/take/mariadb/lessons/10192506-order-by-talalatok-sorba-rendezese)
-* [ ] [MIN, MAX - A minimum és maximum értékek keresése videó](https://e-learning.training360.com/courses/take/mariadb/lessons/10192498-min-max-a-minimum-es-maximum-ertekek-keresese)
-* [ ] [COUNT, AVG, SUM - Megszámlálás, átlagolás és összegzés videó](https://e-learning.training360.com/courses/take/mariadb/lessons/10192501-count-avg-sum-megszamlalas-atlagolas-es-osszegzes)
-* [ ] [GROUP BY - Találatok csoportosítása videó](https://e-learning.training360.com/courses/take/mariadb/lessons/10192518-group-by-talalatok-csoportositasa)
-* [ ] [LIKE - Keresés hasonlóság alapján videó](https://e-learning.training360.com/courses/take/mariadb/lessons/10192529-like-kereses-hasonlosag-alapjan)
+* [x] [AND, OR, NOT - Feltételek összekapcsolása a lekérdezésekben videó](https://e-learning.training360.com/courses/take/mariadb/lessons/10192531-and-or-not-feltetelek-osszekapcsolasa-a-lekerdezesekben)
+* [x] [ORDER BY - Találatok sorba rendezése videó](https://e-learning.training360.com/courses/take/mariadb/lessons/10192506-order-by-talalatok-sorba-rendezese)
+* [x] [MIN, MAX - A minimum és maximum értékek keresése videó](https://e-learning.training360.com/courses/take/mariadb/lessons/10192498-min-max-a-minimum-es-maximum-ertekek-keresese)
+* [x] [COUNT, AVG, SUM - Megszámlálás, átlagolás és összegzés videó](https://e-learning.training360.com/courses/take/mariadb/lessons/10192501-count-avg-sum-megszamlalas-atlagolas-es-osszegzes)
+* [x] [GROUP BY - Találatok csoportosítása videó](https://e-learning.training360.com/courses/take/mariadb/lessons/10192518-group-by-talalatok-csoportositasa)
+* [x] [LIKE - Keresés hasonlóság alapján videó](https://e-learning.training360.com/courses/take/mariadb/lessons/10192529-like-kereses-hasonlosag-alapjan)
 
 ### Összetett lekérdezések és adatmanipulációk
 
