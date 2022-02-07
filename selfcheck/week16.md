@@ -29,9 +29,9 @@ bemutatottakat kell megcsinálni a videóval együtt!
 
 ### Összetett lekérdezések és adatmanipulációk
 
-* [ ] [INSERT - Új rekordok beszúrása az adattáblákba videó](https://e-learning.training360.com/courses/take/mariadb/lessons/10192521-insert-uj-rekordok-beszurasa-az-adattablakba)
-* [ ] [UPDATE - Az egyes rekordok frissítése videó](https://e-learning.training360.com/courses/take/mariadb/lessons/10192534-update-az-egyes-rekordok-frissitese)
-* [ ] [DELETE - Rekordok törlése videó](https://e-learning.training360.com/courses/take/mariadb/lessons/10192512-delete-rekordok-torlese)
+* [x] [INSERT - Új rekordok beszúrása az adattáblákba videó](https://e-learning.training360.com/courses/take/mariadb/lessons/10192521-insert-uj-rekordok-beszurasa-az-adattablakba)
+* [x] [UPDATE - Az egyes rekordok frissítése videó](https://e-learning.training360.com/courses/take/mariadb/lessons/10192534-update-az-egyes-rekordok-frissitese)
+* [x] [DELETE - Rekordok törlése videó](https://e-learning.training360.com/courses/take/mariadb/lessons/10192512-delete-rekordok-torlese)
 * [ ] [JOIN - Táblák összekötése videó](https://e-learning.training360.com/courses/take/mariadb/lessons/10192533-join-tablak-osszekotese)
 * [ ] [Join megvalósítása összerendelő tábla segítségével videó](https://e-learning.training360.com/courses/take/mariadb/lessons/10192535-join-megvalositasa-osszerendelo-tabla-segitsegevel)
 * [ ] [Egy tábla csatolása saját magához videó](https://e-learning.training360.com/courses/take/mariadb/lessons/10192493-egy-tabla-csatolasa-sajat-magahoz)
