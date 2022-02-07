@@ -1,7 +1,10 @@
 package activity;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.List;
 
 public class Track {
@@ -55,6 +58,27 @@ public class Track {
         return sideA * sideB;
     }
 
+    public void loadFromGpx(Path path) {
+        try (BufferedReader br = Files.newBufferedReader(path)) {
+            String line;
+            while ((line = br.readLine()) != null) {
+                readLine(line, br);
+            }
+        } catch (IOException ioe) {
+            throw new IllegalArgumentException("Can not read file.", ioe);
+        }
+    }
+
+    private void readLine(String line, BufferedReader br) throws IOException {
+        if (line.contains("<trkpt")) {
+            String[] lineSplit = line.split("\"");
+            Coordinate coordinate = new Coordinate(Double.parseDouble(lineSplit[1]), Double.parseDouble(lineSplit[3]));
+            line = br.readLine();
+            double elevation = Double.parseDouble(line.split(">")[1].split("<")[0]);
+            addTrackPoint(new TrackPoint(coordinate, elevation));
+        }
+    }
+
     private double getMaxLatitude() {
         return trackPoints.stream()
                 .mapToDouble(t -> t.getCoordinate().getLatitude())
@@ -82,4 +106,5 @@ public class Track {
                 .min()
                 .orElseThrow(() -> new IllegalStateException("No coordianates found."));
     }
+
 }

@@ -2,8 +2,9 @@ package activity;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import java.nio.file.Paths;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 public class TrackTest {
 
@@ -77,5 +78,19 @@ public class TrackTest {
         track.addTrackPoint(new TrackPoint(new Coordinate(3.67, -42.789), 200));
 
         assertEquals(2318.4118, track.getRectangleArea());
+    }
+
+    @Test
+    public void testLoadFromGpxError() {
+        IllegalArgumentException iae = assertThrows(IllegalArgumentException.class,
+                () -> track.loadFromGpx(Paths.get("src/test/resources/trac0101k.gpx")));
+        assertEquals("Can not read file.", iae. getMessage());
+    }
+
+    @Test
+    public void testLoadFromGpx() {
+        track.loadFromGpx(Paths.get("src/test/resources/track.gpx"));
+        assertEquals(2801, track.getTrackPoints().size());
+        assertEquals(18.5411780, track.getTrackPoints().get(1).getCoordinate().getLongitude());
     }
 }
