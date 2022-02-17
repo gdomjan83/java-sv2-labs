@@ -1,0 +1,1 @@
+create table activities (id int auto_increment, start_time timestamp, activity_desc varchar(255), activity_type varchar(255), primary key (id));
