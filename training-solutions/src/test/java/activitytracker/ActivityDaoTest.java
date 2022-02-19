@@ -38,10 +38,11 @@ class ActivityDaoTest {
 
     @Test
     void testInsertAndQuery() {
-        activityDao.saveActivity(activity1);
+        Activity activity = activityDao.saveActivity(activity1);
         activityDao.saveActivity(activity2);
         activityDao.saveActivity(activity3);
         assertEquals(3, activityDao.listActivities().size());
-        assertEquals(activity2, activityDao.findActivityById(2));
+        assertEquals(activity1, activityDao.findActivityById(1));
     }
+
 }

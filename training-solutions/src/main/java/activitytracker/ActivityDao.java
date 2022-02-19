@@ -1,5 +1,7 @@
 package activitytracker;
 
+import org.mariadb.jdbc.client.result.Result;
+
 import javax.sql.DataSource;
 import java.sql.*;
 import java.util.ArrayList;
@@ -16,18 +18,29 @@ public class ActivityDao {
         return dataSource;
     }
 
-    public void saveActivity(Activity activity) {
+    public Activity saveActivity(Activity activity) {
         try (Connection conn = dataSource.getConnection();
              //language=sql
              PreparedStatement stmt = conn.prepareStatement(
-                     "insert into activities (start_time, activity_desc, activity_type) values (?, ?, ?)")) {
+                     "insert into activities (start_time, activity_desc, activity_type) values (?, ?, ?)", Statement.RETURN_GENERATED_KEYS);
+             ) {
 
             stmt.setTimestamp(1, Timestamp.valueOf(activity.getStartTime()));
             stmt.setString(2, activity.getDesc());
             stmt.setString(3, activity.getType().toString());
             stmt.execute();
+            return findActivityById(getGeneratedKey(stmt));
         } catch (SQLException sqle) {
             throw new IllegalStateException("Can not insert into database.", sqle);
+        }
+    }
+
+    private long getGeneratedKey(Statement stmt) throws SQLException{
+        try (ResultSet resultset = stmt.getGeneratedKeys()) {
+            if (resultset.next()) {
+                return resultset.getLong(1);
+            }
+            throw new IllegalStateException("No generated key created.");
         }
     }
 
