@@ -93,11 +93,11 @@ public class ActivityDao {
         try(ResultSet rs = stmt.executeQuery()) {
             if (rs.next()) {
                 return new Activity(
-                        rs.getInt(1),
-                        rs.getTimestamp(2).toLocalDateTime(),
-                        rs.getString(3),
-                        Type.valueOf(rs.getString(4)),
-                        listTrackPoints(rs.getInt(1)));
+                        rs.getInt("id"),
+                        rs.getTimestamp("start_time").toLocalDateTime(),
+                        rs.getString("activity_desc"),
+                        Type.valueOf(rs.getString("activity_type")),
+                        listTrackPoints(rs.getInt("id")));
             }
             throw new IllegalStateException("No activity found.");
         }
@@ -111,7 +111,7 @@ public class ActivityDao {
             stmt.setInt(1, activityId);
             try (ResultSet rs = stmt.executeQuery()) {
                 while (rs.next()) {
-                    result.add(new TrackPoint(rs.getDate(2).toLocalDate(), rs.getFloat(3), rs.getFloat(4)));
+                    result.add(new TrackPoint(rs.getDate("start_time").toLocalDate(), rs.getFloat("latitude"), rs.getFloat("longitude")));
                 }
             }
             return result;
