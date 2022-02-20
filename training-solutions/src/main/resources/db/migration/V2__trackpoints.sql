@@ -1,0 +1,2 @@
+create table track_point (id int auto_increment, start_time date, latitude float, longitude float, activity_id int,
+  constraint fk_activity foreign key(activity_id) references activities (id), constraint pk_track primary key (id));
