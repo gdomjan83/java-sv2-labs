@@ -48,9 +48,8 @@
         </dependency>
 
         <dependency>
-            <groupId>springframework</groupId>
+            <groupId>org.springframework</groupId>
             <artifactId>spring-jdbc</artifactId>
-            <version>1.2.6</version>
         </dependency>
 
 
