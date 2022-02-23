@@ -48,7 +48,7 @@ public class ActivityDao {
 
     public Activity findActivityById(int id) {
         //language=sql
-        return jdbcTemplate.query("select * from activities where id = ?", (rs, i) -> createActivity(rs), id).get(0);
+        return jdbcTemplate.queryForObject("select * from activities where id = ?", (rs, i) -> createActivity(rs), id);
     }
 
 
