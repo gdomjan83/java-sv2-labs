@@ -37,7 +37,6 @@ class ActivityDaoTest {
         Flyway flyway = Flyway.configure().dataSource(dataSource).load();
         flyway.clean();
         flyway.migrate();
-
     }
 
     @Test
