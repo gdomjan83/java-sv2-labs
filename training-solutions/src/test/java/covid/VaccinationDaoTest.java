@@ -28,9 +28,9 @@ class VaccinationDaoTest {
 
         vaccinationDao = new VaccinationDao(dataSource);
 
-//        Flyway flyway = Flyway.configure().dataSource(dataSource).locations("db/migration/covid").load();
-//        flyway.clean();
-//        flyway.migrate();
+        Flyway flyway = Flyway.configure().dataSource(dataSource).locations("db/migration/covid").load();
+        flyway.clean();
+        flyway.migrate();
     }
 
     @Test
@@ -43,6 +43,14 @@ class VaccinationDaoTest {
         IllegalArgumentException iae = assertThrows(IllegalArgumentException.class,
                 () -> vaccinationDao.findCityByZipCode(111111));
         assertEquals("Zip code does not exist.", iae.getMessage());
+    }
+
+    @Test
+    void testInsertCitizen() {
+        Citizen citizen = new Citizen("Domján Gábor", "8999", 20, "gdomj@gmail.com", "039446574");
+        vaccinationDao.insertCitizen(citizen);
+        Citizen citizenFromDb = vaccinationDao.findCitizenbySsn("039446574");
+        assertEquals("Domján Gábor", citizenFromDb.getFullName());
     }
 
 }

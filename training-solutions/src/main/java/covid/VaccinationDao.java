@@ -40,9 +40,18 @@ public class VaccinationDao {
     }
 
     public void insertCitizen(Citizen citizen) {
-
+        //language=sql
+        jdbcTemplate.update(
+                "insert into citizens (citizen_name, zip, age, email, taj) values (?, ?, ?, ?, ?)",
+                citizen.getFullName(), citizen.getZipCode(), citizen.getAge(), citizen.getEmailAddress(), citizen.getSsn());
     }
 
+    public Citizen findCitizenbySsn(String Ssn) {
+        //language=sql
+        return jdbcTemplate.queryForObject("select * from citizens where taj = ?",
+                (rs, i) -> new Citizen(rs.getString("citizen_name"), rs.getString("zip"),
+                        rs.getInt("age"), rs.getString("email"), rs.getString("taj")), Ssn);
+    }
 
     private void insertCities(String line) {
         String[] data = line.split(";");
