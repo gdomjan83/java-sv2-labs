@@ -22,6 +22,12 @@ public class Citizen {
         this.ssn = ssn;
     }
 
+    public Citizen(String fullName, String zipCode, int age, String emailAddress, String ssn, int numberOfVaccination, LocalDateTime lastVaccination) {
+        this(fullName, zipCode, age, emailAddress, ssn);
+        this.numberOfVaccination = numberOfVaccination;
+        this.lastVaccination = lastVaccination;
+    }
+
     public int getNumberOfVaccination() {
         return numberOfVaccination;
     }
